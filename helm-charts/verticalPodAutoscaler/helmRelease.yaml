@@ -1,0 +1,17 @@
+---
+apiVersion: helm.toolkit.fluxcd.io/v2beta2
+kind: HelmRelease
+metadata:
+  name: vpa-release
+  namespace: vpa
+spec:
+  chart:
+    spec:
+      chart: vpa
+      reconcileStrategy: ChartVersion
+      sourceRef:
+        kind: HelmRepository
+        name: fairwinds-repo
+      version: 4.7.1
+  interval: 1m0s
+  #values:
