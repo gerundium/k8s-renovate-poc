@@ -1,0 +1,31 @@
+---
+replicaCount: 1
+
+image:
+  repository: bitnami/postgresql
+  tag: "11.9.9"
+  pullPolicy: IfNotPresent
+
+postgresql:
+  username: admin
+  password: admin123
+  database: mydatabase
+
+service:
+  type: ClusterIP
+  port: 5432
+
+resources:
+  limits:
+    memory: "512Mi"
+    cpu: "500m"
+  requests:
+    memory: "256Mi"
+    cpu: "250m"
+
+persistence:
+  enabled: true
+  storageClass: ""
+  accessModes:
+    - ReadWriteOnce
+  size: 1Gi
