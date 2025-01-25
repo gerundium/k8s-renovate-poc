@@ -6,5 +6,6 @@
   "kubernetes": {
     "fileMatch": ["\\.yaml$"]
   },
-  "labels": ["tbd-k1", "tbd-k2"]
+  "labels": ["tbd-k1", "tbd-k2"],
+  "assignees": ["gerundium"]
 }
