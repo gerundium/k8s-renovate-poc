@@ -3,7 +3,7 @@ replicaCount: 1
 
 image:
   repository: bitnami/postgresql
-  tag: "17.2.0"
+  tag: "17.4.0"
   pullPolicy: IfNotPresent
 
 postgresql:
